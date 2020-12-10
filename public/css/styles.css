@@ -55,6 +55,11 @@ body {
   transition: transform 0.1s, width 0.6s, height 0.6s;
 }
 
+@media screen and (max-width: 480px) {
+  .cursor {
+    display: none;
+  }
+}
 /* scrollbar css */
 
 ::-webkit-scrollbar {

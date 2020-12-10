@@ -1,4 +1,7 @@
 const s = skrollr.init();
+if (s.isMobile()) {
+  s.destroy();
+}
 new WOW().init();
 const root = document.querySelector(":root");
 const hoverables = document.querySelectorAll("a");
