@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "Kollectif";
+  src: url("../fonts/Kollectif.ttf");
+}
+
+@font-face {
+  font-family: "Kollectif-Bold";
+  src: url("../fonts/Kollektif-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none !important;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Kollectif-Bold";
+  overflow-x: hidden;
+}
+
+/* cursor css */
+
+:root {
+  --x: 120px;
+  --y: 120px;
+  --cSize: 34px;
+}
+
+.cursor {
+  background-color: white;
+  mix-blend-mode: difference;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--cSize);
+  height: var(--cSize);
+  border-radius: 50%;
+  transform: translate(
+    calc(var(--x) - var(--cSize) / 2),
+    calc(var(--y) - var(--cSize) / 2)
+  );
+  will-change: transform;
+  transform-style: preserve-3d;
+  z-index: 99;
+  pointer-events: none;
+  transition: transform 0.1s, width 0.6s, height 0.6s;
+}
+
+/* scrollbar css */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
+
+/* animation */
+
+@keyframes floating {
+  from {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-5px, 5px);
+  }
+  75% {
+    transform: translate(5px, 10px);
+  }
+  to {
+    transform: translate(0px, -0px);
+  }
+}
+
+/* background graphics */
+
+.backdrop-logo {
+  z-index: -1;
+  position: fixed;
+  font-size: 40rem;
+  top: 26vh;
+  left: 45vw;
+  -webkit-text-stroke: 2px white;
+  -webkit-text-fill-color: transparent;
+  animation: floating 6.6s ease-in-out infinite;
+}
+
+/* section css */
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#landing-section {
+  height: 100vh;
+}
+
+#landing-section h1 {
+  mix-blend-mode: difference;
+  text-align: center;
+  font-size: 7rem;
+  line-height: 80%;
+  animation: floating 6s ease-in-out infinite;
+}
+
+.section {
+  margin: 200px 0px;
+}
+
+/* css for every line of text */
+
+p {
+  mix-blend-mode: difference;
+  text-align: center;
+  font-size: 3.75rem;
+  line-height: 1;
+  margin: 1.25rem 0rem;
+}
+
+/* css for project box */
+
+.project-box {
+  background-color: grey;
+  mix-blend-mode: difference;
+  width: 640px;
+  height: 360px;
+  margin: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* css for the contact icons container */
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-link {
+  margin: 3rem;
+}
+
+.contact-icon {
+  font-size: 5rem;
+}
