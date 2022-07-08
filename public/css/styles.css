@@ -128,14 +128,14 @@ p {
 /* css for project box */
 
 .project-box {
-  background-color: grey;
+  background-color: transparent;
   mix-blend-mode: difference;
   width: 640px;
   height: 360px;
   margin: 20px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 /* css for the contact icons container */
@@ -181,6 +181,11 @@ p {
 
   .contact-icon {
     font-size: 3rem;
+  }
+
+  .project-box {
+    width: 400px;
+    height: 300px;
   }
 }
 
